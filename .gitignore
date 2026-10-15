@@ -1,0 +1,11 @@
+# Third-party reference copies (ROBT613 workshop clone, MOABB sources) — not our code
+ref/
+
+# Data cache and local environment (re-created by the notebook / pip)
+mne_data/
+.venv/
+
+# Editor / OS / Jupyter clutter
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/
