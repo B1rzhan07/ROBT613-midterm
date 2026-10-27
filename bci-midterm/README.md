@@ -53,6 +53,14 @@ python tools/build_report.py
 tectonic report/main.tex
 ```
 
+For editing the current report in Overleaf, upload
+[`output/overleaf-report.zip`](output/overleaf-report.zip) as a project. Select
+`main.tex` as the main document and XeLaTeX as the compiler. The archive contains
+all figures and an editing guide; it does not require Python. To refresh this archive
+from the current report source, run `python tools/package_overleaf.py`. Manual edits
+in Overleaf are separate from the notebook; `build_report.py` regenerates the local
+source and can overwrite manual changes.
+
 The slides are generated from `results/presentation_data.json` with pptxgenjs, then
 exported to PDF from PowerPoint (File > Export > PDF to `output/pdf/presentation.pdf`):
 
