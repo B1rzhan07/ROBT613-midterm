@@ -1721,7 +1721,7 @@ if 'google.colab' in sys.modules:
 # * **OpenAI Codex**: code review, debugging, API lookup, implementation changes to the
 #   helpers in this notebook, statistical checks, plotting, and drafting report and slide text.
 # * **Claude Code (Anthropic)**: checking the submission against the assignment
-#   requirements and editing report and README wording.
+#   requirements, editing report and README wording, and writing the slide generator.
 #
 # No AI tool generated results, citations or dataset facts. Every number in the report
 # and slides is exported from this executed notebook. All team members reviewed the

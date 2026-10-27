@@ -1,55 +1,57 @@
-## 1. Calibration-free P300 decoding
+# Speaker notes
 
-45 s. Introduce the practical question: can a new user avoid labelled calibration? Explain that this is an offline retrospective analysis of BrainInvaders2013a, not a new online BCI. Names supplied by the team. Source: notebook introduction and results/run_manifest.json.
+## 1. Can a P300 decoder skip calibration?
 
-## 2. Research question and hypotheses
+45 s. Introduce the practical question: can a new user avoid labelled calibration? Make clear that this is an offline, retrospective analysis of BrainInvaders2013a, not a new online BCI. Introduce the four team members and their lead areas. Source: notebook introduction and results/run_manifest.json.
 
-60 s. H1 asks whether external-subject training beats chance. H2 compares transfer with subject-specific calibration. H3 matches training class counts so quantity alone cannot explain a gap. The 2014 information-geometry paper motivates generic initialization and adaptation. Kim and Kim 2025 motivates practical zero-training use, using out-of-scope methods that we do not implement. Sources: https://arxiv.org/abs/1409.0107 and https://doi.org/10.1109/TNSRE.2025.3603979 (abstract consulted).
+## 2. Can other users’ data replace calibration?
 
-## 3. Data and provenance
+60 s. Every P300 session normally starts with calibration. H1 asks whether training on other people beats chance. H2 compares transfer with subject-specific calibration. H3 matches training class counts so that quantity alone cannot explain a gap. Barachant and Congedo (2014) motivate generic initialization; Kim and Kim (2025) motivate practical zero-training use with methods outside our scope, which we do not implement. Sources: arXiv:1409.0107 and doi:10.1109/TNSRE.2025.3603979.
 
-60 s. Subjects 8-24 each have one session. Explain why subjects 1-7 are excluded: their longitudinal archives are substantially larger. Every included run must pass assertions for 80 targets, 400 non-targets, 16 EEG channels and 512 Hz. File metadata determines adaptive condition. All data still load through MOABB into MNE. Source: notebook stage 1; acquisition paper https://arxiv.org/abs/1904.09111.
+## 3. Data audit and provenance
 
-## 4. Filtering and resampling
+60 s. BrainInvaders2013a, subjects 8–24: each has exactly one session. Subjects 1–7 have eight sessions each (about 1 GB per subject), which does not fit the 30-minute Colab budget, so they are excluded by data size, not by performance. Every included run passes assertions for 80 targets, 400 non-targets, 16 EEG channels and 512 Hz. Units are volts in MNE, reported in µV. Data come from the original Zenodo files and are loaded through MOABB into MNE. Source: notebook stage 1; acquisition paper arXiv:1904.09111.
 
-65 s. Explain evidence for 0.5-20 Hz rather than presenting defaults. Slow drift motivates high-pass filtering. The low-pass suppresses mains activity, assessed in residual measurements. Events resample together with the data. A half-support edge guard keeps epochs away from recording boundaries. No filtering crosses held-out runs. Zero phase uses future samples, so the conclusion is offline. Source: notebook stage 2 and filter_measurements.csv.
+## 4. Filter choice backed by the spectrum
+
+65 s. The PSD shows slow drift below 0.5 Hz and a sharp 50 Hz mains peak, strongest on P7. The FIR band-pass 0.5–20 Hz removes both: after the low-pass, 50 Hz is about −75 dB, so a notch adds nothing (measured in filter_measurements.csv). Data are resampled from 512 to 128 Hz together with the events. A 3.3 s edge guard (the filter half-support) keeps epochs away from recording edges. Filtering is done per run, so nothing crosses held-out runs. Zero-phase filtering uses future samples, so the analysis is offline. Source: notebook stage 2.
 
 ## 5. Artifact handling and quality control
 
-65 s. ICA fits a 1-20 Hz copy of each unlabelled run and applies the unmixing to the main band-pass. Fp1/Fp2 are ocular proxies, not measured EOG. Exclusion requires both a proxy correlation outlier and a frontal map. The example plot is not a claim that every ocular artifact disappears. Present the full-cohort retention counts at right. A flagged core site or excessive bad channels stops the notebook for review. Source: notebook stage 3 and qc.csv.
+65 s. ICA (FastICA, 15 components) is fitted on a 1–20 Hz copy of each unlabelled run and the unmixing is applied to the main band-pass. Fp1/Fp2 serve as ocular proxies because there is no EOG channel. A component is removed only if both a proxy-correlation outlier rule and a frontal-map rule agree. The plot shows the blink-related deflection at Fp1 disappearing while the Pz response is preserved. Then a 100 µV peak-to-peak rejection runs on the cleaned epochs. Full-cohort counts: 3 target / 12 non-target edge drops and 80 / 329 amplitude drops; 97.40% of epochs retained. F6 was flagged as a bad channel and is ignored by rejection; it is not in the decoder montage. Residual artifacts remain possible. Source: notebook stage 3 and qc.csv.
 
-## 6. P300 physiology before decoding
+## 6. The P300 is there before we decode it
 
-65 s. Establish a brain-signal check before classification. The preselected Pz window is 250-600 ms. Grand-average plots weight subjects equally. Point to the positive centro-parietal response and the individual variation. Single-epoch permutations are descriptive because flashes overlap. The physiological check never selects decoder features by their test accuracy. Source: notebook stage 4 and erp.csv.
+65 s. Before any classifier, check that the expected brain response exists. The Pz window 250–600 ms was fixed in advance (notebook 01; Vaineau et al. 2019 report 240–600 ms). Grey lines are individual subjects, red is the grand average; the topomaps show the centro-parietal positivity peaking around 350 ms. 16 of 17 subjects have a positive window mean, mean contrast 2.74 µV. Single-epoch permutations are descriptive only because flashes overlap. The window is never chosen by decoding accuracy. Source: notebook stage 4 and erp.csv.
 
-## 7. Features and linear classifier
+## 7. One leakage-free pipeline
 
-55 s. Describe a feature as the mean voltage at one electrode during one 50 ms interval. Five sites times sixteen windows gives eighty features. The montage was frozen before the full run and does not depend on held-out flags. The earlier three-person pilot informed the revision. Scaling and shrinkage fit training data only. No hyperparameters are tuned against test AUC. Source: notebook stage 5.
+55 s. A feature is the mean voltage at one electrode during one 50 ms interval: five sites times sixteen windows over 0–800 ms gives 80 features. The montage was frozen before the full run and does not depend on held-out data. Everything that learns from data — the scaler and the analytic shrinkage of LDA — sits inside one scikit-learn Pipeline and is fitted on training folds only. No hyperparameters are tuned, so no nested CV is needed. The heatmap shows where the target − non-target difference lives for subject 8. Source: notebook stage 5.
 
-## 8. Evaluation on the same held-out epochs
+## 8. Same test epochs, different training data
 
-65 s. All rows test exactly the same epochs for each subject/run. Within uses the other run from that person. LOSO uses all other people, with an assert excluding the test subject. Matched transfer preserves both target and non-target training counts and averages ten seeded draws. AUC ranks flashes and is distinct from complete command accuracy. Source: notebook stages 5-6 and comparison_runs.csv.
+65 s. All three conditions test exactly the same held-out run of each subject. Within trains on the subject’s other run (leave-one-run-out, never a random epoch split, because overlapping flashes share samples). LOSO trains on all runs of the other 16 users, and an assertion guarantees the test subject is never in training. LOSO-matched subsamples the other users to the same target and non-target counts as Within and averages ten seeded draws. Chance level comes from 200 label permutations within runs. Each subject’s score is the mean over its two test runs. Source: notebook stages 5–6 and comparison_runs.csv.
 
-## 9. Mean AUC across subjects
+## 9. Transfer works, calibration still wins
 
-65 s. State that the native chart uses subject means, and the printed SD is between-subject spread rather than fold spread. No bar represents a single random split. Interpret the observed ordering without assuming the hypothesis must succeed. Source: comparison_subjects.csv; exact values also appear in the report.
+65 s. Bars are means over 17 subjects; each subject is the mean of its two held-out runs, so the SD is between-subject spread. Within reaches 0.875, LOSO 0.810, LOSO-matched 0.724. LOSO-matched is lower than full LOSO, so the amount of external data matters. All 34 LOSO test runs beat their permutation null at p < .05. No bar comes from a random epoch split. Source: comparison_subjects.csv.
 
-## 10. Individual transfer performance
+## 10. Every user transfers, but not equally
 
-65 s. Each thin line is one person, averaged across two test runs. The thick line is the cohort mean, and the dotted line is chance. Highlight variation rather than promising universal performance. Compare the median paired gap with the two-fold spread, while noting that two folds estimate variability poorly. Source: comparison_subjects.csv.
+65 s. Each grey line is one person (mean of two test runs); the coral line is the cohort mean and the slate line is chance. 15 of 17 users lose AUC without calibration. The median Within − LOSO gap (0.072) is several times the median Within fold SD (0.018), though two folds estimate variability poorly. The weakest LOSO subject still reaches 0.671. Source: comparison_subjects.csv.
 
-## 11. Paired hypothesis tests
+## 11. All three hypotheses hold in this cohort
 
-65 s. One subject is one unit. The three directional primary comparisons use Wilcoxon signed-rank tests and Holm correction. Read both the median difference and adjusted p-value. Pilot-excluded sensitivity uses fourteen evaluation subjects. The tests are conventional cohort summaries: LOSO models share training users, and p-values are not exact guarantees for new populations. Source: hypothesis_tests.csv and sensitivity_tests.csv.
+65 s. One subject is one unit. The three directional comparisons use paired Wilcoxon signed-rank tests with Holm correction. Read the median difference together with the adjusted p-value. Excluding pilot subjects 8–10 (n = 14) gives the same conclusions. These are conventional cohort summaries: LOSO models share training users, so p-values are not exact guarantees for new populations. Source: hypothesis_tests.csv and sensitivity_tests.csv.
 
-## 12. Conclusion and limits
+## 12. What the result shows
 
-45 s. State the outcome as conditional cohort evidence. Stress the limits of flash AUC, offline preprocessing and one acquisition protocol. A different outcome would still be valid under the project rubric. Explain the verified Colab CPU timing in the backup record. Every teammate should be prepared to explain all stages. Source: notebook conclusions and run_manifest.json.
+45 s. State the outcome as conditional cohort evidence: transfer works well above chance, but calibration still adds about 0.07 AUC, and the amount of external data matters. Then stress the limits: offline preprocessing, flash-level AUC instead of command accuracy, one acquisition protocol, and dependent LOSO models. A negative result would have been equally valid under the rubric. Every teammate should be ready to explain any stage. Source: notebook conclusions and run_manifest.json.
 
 ## 13. References and AI disclosure
 
-Backup slide. Acquisition and motivation references are background, not imported results. The core follows workshop notebooks 00-06. Codex assisted with implementation, execution, API lookup, statistics, plotting and drafting in this session. All numbers come from the executed notebook. Earlier AI usage remains for the team to confirm. Authors must review and be able to explain every line.
+Backup slide. References are background and motivation, not sources of results. The core pipeline follows workshop notebooks 00–06 and cites them where code is reused. AI tools: OpenAI Codex for code review, debugging, API lookup, implementation, statistics checks, plotting and text drafting; Claude Code for checking the submission against the assignment and editing wording. Every number comes from the executed notebook.
 
 ## 14. Reproducibility record
 
-Backup slide. Exact direct dependencies are pinned and actual versions are in the manifest. The notebook saves figures and CSVs. Execution environment: Google Colab. Cold cache at setup: true. Initial installation required one restart to reload NumPy. The downloader respects Zenodo rate limits. Source: results/run_manifest.json. Saved notebook: https://colab.research.google.com/drive/19qYoD5urhaAcdMhhokzYAZPZuN2ra2Rh
+Backup slide. Direct dependencies are pinned in requirements.txt and actual versions are recorded in the run manifest. The verified run used a fresh Google Colab CPU session with an empty data cache: 7.41 minutes including downloads, all 32 code cells, no errors. The first install needs one runtime restart to reload NumPy. The downloader respects Zenodo rate limits. Source: results/run_manifest.json and results/colab_verification.json.

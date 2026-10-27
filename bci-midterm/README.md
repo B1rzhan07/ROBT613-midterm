@@ -53,6 +53,14 @@ python tools/build_report.py
 tectonic report/main.tex
 ```
 
+The slides are generated from `results/presentation_data.json` with pptxgenjs, then
+exported to PDF from PowerPoint (File > Export > PDF to `output/pdf/presentation.pdf`):
+
+```bash
+npm install
+node tools/build_presentation.mjs
+```
+
 The report and slides use exported notebook numbers, not hand-entered estimates. Direct
 analysis dependencies are exactly pinned in `requirements.txt`. `results/run_manifest.json`
 records actual versions, subjects and execution environment. `requirements-lock.txt`
@@ -68,6 +76,6 @@ The notebook cites each reused ROBT613 workshop stage (B. Abibullaev,
 https://github.com/berdakh/ROBT613-BCI-Workshop). AI tools are disclosed in the last
 notebook section and in the report appendix: OpenAI Codex (code review, debugging,
 implementation, plotting, text drafting) and Claude Code (requirements check, wording
-edits). Every number comes from the executed notebook. The original dataset papers
+edits, slide generator). Every number comes from the executed notebook. The original dataset papers
 motivate the question; no out-of-scope Riemannian or neural-network method enters the
 core pipeline.

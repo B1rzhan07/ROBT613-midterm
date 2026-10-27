@@ -1,0 +1,12 @@
+{
+  "name": "bci-midterm-slides",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "slides": "node tools/build_presentation.mjs"
+  },
+  "dependencies": {
+    "image-size": "1.2.1",
+    "pptxgenjs": "3.12.0"
+  }
+}
