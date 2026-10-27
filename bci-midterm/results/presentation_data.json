@@ -1,0 +1,414 @@
+{
+  "manifest": {
+    "subjects": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "n_subjects": 17,
+    "seed": 613,
+    "feature_channels": [
+      "Cz",
+      "P3",
+      "Pz",
+      "P4",
+      "Oz"
+    ],
+    "feature_windows": [
+      [
+        0.0,
+        0.05
+      ],
+      [
+        0.05,
+        0.1
+      ],
+      [
+        0.1,
+        0.15
+      ],
+      [
+        0.15,
+        0.2
+      ],
+      [
+        0.2,
+        0.25
+      ],
+      [
+        0.25,
+        0.3
+      ],
+      [
+        0.3,
+        0.35
+      ],
+      [
+        0.35,
+        0.4
+      ],
+      [
+        0.4,
+        0.45
+      ],
+      [
+        0.45,
+        0.5
+      ],
+      [
+        0.5,
+        0.55
+      ],
+      [
+        0.55,
+        0.6
+      ],
+      [
+        0.6,
+        0.65
+      ],
+      [
+        0.65,
+        0.7
+      ],
+      [
+        0.7,
+        0.75
+      ],
+      [
+        0.75,
+        0.8
+      ]
+    ],
+    "versions": {
+      "mne": "1.13.2",
+      "moabb": "1.7.2",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.9.1",
+      "matplotlib": "3.11.2",
+      "PyYAML": "6.0.3",
+      "remotezip": "0.12.6",
+      "threadpoolctl": "3.7.0"
+    },
+    "analysis_minutes": 7.268977186883331,
+    "setup_analysis_minutes": 7.4093575875500015,
+    "environment": "Google Colab",
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+    "native_threadpools": [
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/usr/local/lib/python3.13/dist-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/usr/local/lib/python3.13/dist-packages/torch/lib/libgomp.so.1",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/usr/local/lib/python3.13/dist-packages/numpy.libs/libscipy_openblas64_-f48b354e.so",
+        "version": "0.3.34.106.0",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/usr/local/lib/python3.13/dist-packages/scipy.libs/libscipy_openblas-5f890258.so",
+        "version": "0.3.31.dev",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      }
+    ],
+    "download_load_seconds": 1.4529099569990649,
+    "data_prepare_seconds": 179.31406067099988,
+    "colab_verified": true,
+    "cold_cache_at_start": true,
+    "full_planned_cohort": true,
+    "qc_totals": {
+      "edge_drop_T": 3,
+      "edge_drop_NT": 12,
+      "amp_drop_T": 80,
+      "amp_drop_NT": 329,
+      "kept_T": 2637,
+      "kept_NT": 13259
+    },
+    "observed_bad_channels": [
+      "F6"
+    ],
+    "retained_percent": 97.40196078431373
+  },
+  "subjects": [
+    {
+      "subject": 8,
+      "within": 0.8840818482723879,
+      "loso_matched": 0.7649181449980917,
+      "loso": 0.8121877382370387,
+      "loso_runs_p<.05": 2,
+      "within_fold_sd": 0.0164721911879063,
+      "loso_fold_sd": 0.0086577317528495,
+      "loso_matched_fold_sd": 0.0036751853759899
+    },
+    {
+      "subject": 9,
+      "within": 0.8833509802988484,
+      "loso_matched": 0.8210862797817329,
+      "loso": 0.9055328193902478,
+      "loso_runs_p<.05": 2,
+      "within_fold_sd": 0.0152658546185783,
+      "loso_fold_sd": 0.002454156970331,
+      "loso_matched_fold_sd": 0.0384511044121784
+    },
+    {
+      "subject": 10,
+      "within": 0.8906051863964344,
+      "loso_matched": 0.6615121421803984,
+      "loso": 0.77035347157889,
+      "loso_runs_p<.05": 2,
+      "within_fold_sd": 0.0281831474359085,
+      "loso_fold_sd": 0.0063215529128042,
+      "loso_matched_fold_sd": 0.0453623877019111
+    },
+    {
+      "subject": 11,
+      "within": 0.9128690243176458,
+      "loso_matched": 0.7213432645399185,
+      "loso": 0.7769303748911724,
+      "loso_runs_p<.05": 2,
+      "within_fold_sd": 0.0212041116011387,
+      "loso_fold_sd": 0.0453722796902913,
+      "loso_matched_fold_sd": 0.065647228470766
+    },
+    {
+      "subject": 12,
+      "within": 0.8692345320351759,
+      "loso_matched": 0.7844520728643216,
+      "loso": 0.856033762562814,
+      "loso_runs_p<.05": 2,
+      "within_fold_sd": 0.0182740687950143,
+      "loso_fold_sd": 0.0159505434501135,
+      "loso_matched_fold_sd": 0.0236851456969127
+    },
+    {
+      "subject": 13,
+      "within": 0.8605418935676519,
+      "loso_matched": 0.6521525829053978,
+      "loso": 0.7380191228270379,
+      "loso_runs_p<.05": 2,
+      "within_fold_sd": 0.0523577935636078,
+      "loso_fold_sd": 0.0877547634035526,
+      "loso_matched_fold_sd": 0.0543766299295681
+    },
+    {
+      "subject": 14,
+      "within": 0.8318989334566209,
+      "loso_matched": 0.626433241399101,
+      "loso": 0.752457433918949,
+      "loso_runs_p<.05": 2,
+      "within_fold_sd": 0.018706720362183,
+      "loso_fold_sd": 0.0327303209636876,
+      "loso_matched_fold_sd": 0.0601940119602785
+    },
+    {
+      "subject": 15,
+      "within": 0.9292610619739676,
+      "loso_matched": 0.6995386823497749,
+      "loso": 0.8617332179324069,
+      "loso_runs_p<.05": 2,
+      "within_fold_sd": 0.0242469574358519,
+      "loso_fold_sd": 0.003117325595286,
+      "loso_matched_fold_sd": 0.0171224950345663
+    },
+    {
+      "subject": 16,
+      "within": 0.931828125,
+      "loso_matched": 0.8351515625,
+      "loso": 0.916390625,
+      "loso_runs_p<.05": 2,
+      "within_fold_sd": 0.0102751454141169,
+      "loso_fold_sd": 0.0075793008108432,
+      "loso_matched_fold_sd": 0.017595910308089
+    },
+    {
+      "subject": 17,
+      "within": 0.812438940921171,
+      "loso_matched": 0.6093587564813749,
+      "loso": 0.6712025544020537,
+      "loso_runs_p<.05": 2,
+      "within_fold_sd": 0.0509628537341868,
+      "loso_fold_sd": 0.0180106598293873,
+      "loso_matched_fold_sd": 0.0057362924460701
+    },
+    {
+      "subject": 18,
+      "within": 0.96146875,
+      "loso_matched": 0.8374531249999999,
+      "loso": 0.92578125,
+      "loso_runs_p<.05": 2,
+      "within_fold_sd": 0.0038448931227018,
+      "loso_fold_sd": 0.0083085046789418,
+      "loso_matched_fold_sd": 0.0073406522721928
+    },
+    {
+      "subject": 19,
+      "within": 0.8047545284576535,
+      "loso_matched": 0.6628784617003367,
+      "loso": 0.7144751116938617,
+      "loso_runs_p<.05": 2,
+      "within_fold_sd": 0.0030558022000971,
+      "loso_fold_sd": 0.0126043363336242,
+      "loso_matched_fold_sd": 0.0027970150368865
+    },
+    {
+      "subject": 20,
+      "within": 0.7590468749999999,
+      "loso_matched": 0.6705046875,
+      "loso": 0.773015625,
+      "loso_runs_p<.05": 2,
+      "within_fold_sd": 0.0085073784611505,
+      "loso_fold_sd": 0.0281295916390773,
+      "loso_matched_fold_sd": 0.0014252621058291
+    },
+    {
+      "subject": 21,
+      "within": 0.9604273182957394,
+      "loso_matched": 0.7582141290726817,
+      "loso": 0.8479048402255639,
+      "loso_runs_p<.05": 2,
+      "within_fold_sd": 0.0085880688261404,
+      "loso_fold_sd": 0.0163096438632421,
+      "loso_matched_fold_sd": 0.0115412143461898
+    },
+    {
+      "subject": 22,
+      "within": 0.883546875,
+      "loso_matched": 0.742221875,
+      "loso": 0.849328125,
+      "loso_runs_p<.05": 2,
+      "within_fold_sd": 0.0007733980419228,
+      "loso_fold_sd": 0.0011269514325161,
+      "loso_matched_fold_sd": 0.0118396191674922
+    },
+    {
+      "subject": 23,
+      "within": 0.8821610505203765,
+      "loso_matched": 0.736908929968954,
+      "loso": 0.789290680886515,
+      "loso_runs_p<.05": 2,
+      "within_fold_sd": 0.0556539162439043,
+      "loso_fold_sd": 0.0819042530586796,
+      "loso_matched_fold_sd": 0.0845543511748739
+    },
+    {
+      "subject": 24,
+      "within": 0.8147164724541178,
+      "loso_matched": 0.7291005930936527,
+      "loso": 0.8088526231117075,
+      "loso_runs_p<.05": 2,
+      "within_fold_sd": 0.0296575115722863,
+      "loso_fold_sd": 0.0145715288870555,
+      "loso_matched_fold_sd": 0.0351998206898552
+    }
+  ],
+  "tests": [
+    {
+      "hypothesis": "H1: LOSO > 0.5",
+      "n": 17.0,
+      "median_diff": 0.3088526231117074,
+      "mean_diff": 0.3099699633328387,
+      "rank_biserial": 1.0,
+      "p": 7.62939453125e-06,
+      "p_holm_primary": 2.288818359375e-05
+    },
+    {
+      "hypothesis": "H2: Within > LOSO",
+      "n": 17.0,
+      "median_diff": 0.0718941100353491,
+      "mean_diff": 0.0648672364299725,
+      "rank_biserial": 0.8954248366013072,
+      "p": 0.0001907348632812,
+      "p_holm_primary": 0.0001907348632812
+    },
+    {
+      "hypothesis": "H3: Within > LOSO-matched",
+      "n": 17.0,
+      "median_diff": 0.1418760667573168,
+      "mean_diff": 0.1505296390960031,
+      "rank_biserial": 1.0,
+      "p": 7.62939453125e-06,
+      "p_holm_primary": 2.288818359375e-05
+    }
+  ],
+  "sensitivity": [
+    {
+      "hypothesis": "H1: LOSO > 0.5",
+      "n": 14.0,
+      "median_diff": 0.2990716519991112,
+      "mean_diff": 0.305815381960863,
+      "rank_biserial": 1.0,
+      "p": 6.103515625e-05,
+      "p_holm_primary": 0.00018310546875
+    },
+    {
+      "hypothesis": "H2: Within > LOSO",
+      "n": 14.0,
+      "median_diff": 0.0734846717896163,
+      "mean_diff": 0.0666270738248598,
+      "rank_biserial": 0.9428571428571428,
+      "p": 0.00030517578125,
+      "p_holm_primary": 0.00030517578125
+    },
+    {
+      "hypothesis": "H3: Within > LOSO-matched",
+      "n": 14.0,
+      "median_diff": 0.1435640936543696,
+      "mean_diff": 0.1534630297589004,
+      "rank_biserial": 1.0,
+      "p": 6.103515625e-05,
+      "p_holm_primary": 0.00018310546875
+    }
+  ],
+  "means": {
+    "within": 0.8748371997628112,
+    "loso_matched": 0.724307560666808,
+    "loso": 0.8099699633328388
+  },
+  "sds": {
+    "within": 0.056418954918944546,
+    "loso_matched": 0.07097805235532642,
+    "loso": 0.0720156568523622
+  },
+  "median_gap": 0.07189411003534918,
+  "median_fold_sd": 0.0182740687950143,
+  "positive_erp": 16,
+  "mean_erp": 2.7411764705882353
+}

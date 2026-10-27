@@ -9,3 +9,11 @@ mne_data/
 .DS_Store
 .ipynb_checkpoints/
 __pycache__/
+
+# Local build intermediates
+bci-midterm/results/pilot/
+bci-midterm/results/pilot_validation.ipynb
+bci-midterm/.build/
+bci-midterm/report/main.pdf
+bci-midterm/report/*.log
+bci-midterm/.chart-data-*/

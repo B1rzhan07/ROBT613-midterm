@@ -1,0 +1,16 @@
+{
+  "notebook_url": "https://colab.research.google.com/drive/19qYoD5urhaAcdMhhokzYAZPZuN2ra2Rh",
+  "date": "2026-10-27",
+  "cpu_hardware_verified_in_ui": true,
+  "cold_cache_at_start": true,
+  "executed_code_cells": 32,
+  "saved_png_outputs": 17,
+  "errors": 0,
+  "setup_analysis_minutes": 7.4093575875500015,
+  "analysis_minutes": 7.268977186883331,
+  "notebook_sha256": "17839803e08b6876cc62c4dd9837b0fa07d7dcda5ae3ab8801df15c08e882633",
+  "source_matches_script": true,
+  "numeric_results_match_local": true,
+  "initial_install_restart_required": true,
+  "notes": "Fresh Python session and empty dataset cache; packages already installed following initial restart. The successful timed run includes setup checks and all data fetching/analysis. Browser output frames may be blocked; downloaded notebook retains kernel outputs."
+}

@@ -1,0 +1,13 @@
+{
+  "presentation_slides": 14,
+  "native_charts": 2,
+  "native_tables": 5,
+  "package_integrity_passed": true,
+  "layout_passed": true,
+  "chart_workbook_validation_passed": true,
+  "report_pages": 7,
+  "report_body_pages": 6,
+  "presentation_pdf_pages": 14,
+  "native_powerpoint_open_verified": false,
+  "visual_inspection": "All report pages and all slide renders reviewed; final changed pages/slides rechecked."
+}

@@ -1,0 +1,5 @@
+,high-pass (Hz),flashes,peak from 0 (µV),peak from pre-flash (µV),latency (ms),peak from 0 % of 0.1 Hz,peak from pre-flash % of 0.1 Hz
+0,0.1,926,9.01,9.29,391,100.0,100.0
+1,0.5,926,8.15,9.48,391,90.0,102.0
+2,1.0,926,6.87,8.72,391,76.0,94.0
+3,2.0,926,5.47,6.82,242,61.0,73.0

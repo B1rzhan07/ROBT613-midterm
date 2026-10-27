@@ -1,0 +1,312 @@
+{
+  "dataset": "BrainInvaders2013a",
+  "source": "https://zenodo.org/records/2669187",
+  "files": [
+    {
+      "subject": 8,
+      "file": "MNE-braininvaders2013-data/zenodo/2669187/subject_08/meta.yml",
+      "bytes": 323,
+      "sha256": "e3fc1136602b023f2c55c08ce4d98383c49648c2d092e90ca85c4744063479f6"
+    },
+    {
+      "subject": 8,
+      "file": "MNE-braininvaders2013-data/zenodo/2669187/subject_08/Session1/1.mat",
+      "bytes": 19579832,
+      "sha256": "0f1a699907a509ab78e664c76156c44b3a2986b922abbbe92fd078e9b12dbc2f"
+    },
+    {
+      "subject": 8,
+      "file": "MNE-braininvaders2013-data/zenodo/2669187/subject_08/Session1/3.mat",
+      "bytes": 17221048,
+      "sha256": "49dd2c29bdc3c1876b00205e4d30a27012cd19b0b7c2c3fa6b9782ccadf6b422"
+    },
+    {
+      "subject": 9,
+      "file": "MNE-braininvaders2013-data/zenodo/2669187/subject_09/meta.yml",
+      "bytes": 323,
+      "sha256": "e3fc1136602b023f2c55c08ce4d98383c49648c2d092e90ca85c4744063479f6"
+    },
+    {
+      "subject": 9,
+      "file": "MNE-braininvaders2013-data/zenodo/2669187/subject_09/Session1/1.mat",
+      "bytes": 22186680,
+      "sha256": "397d3cecf7c41f211ac85d531ce184f76d9aac893df13fff1c3611a84d6d0f56"
+    },
+    {
+      "subject": 9,
+      "file": "MNE-braininvaders2013-data/zenodo/2669187/subject_09/Session1/3.mat",
+      "bytes": 19771320,
+      "sha256": "3a6da962726bbd57039f80746d2d40d25d472df86b571f4f54175f37c5a21f64"
+    },
+    {
+      "subject": 10,
+      "file": "MNE-braininvaders2013-data/zenodo/2669187/subject_10/meta.yml",
+      "bytes": 323,
+      "sha256": "e3fc1136602b023f2c55c08ce4d98383c49648c2d092e90ca85c4744063479f6"
+    },
+    {
+      "subject": 10,
+      "file": "MNE-braininvaders2013-data/zenodo/2669187/subject_10/Session1/1.mat",
+      "bytes": 18948792,
+      "sha256": "b361e2d6591a1b0e614ff933b5fe106c3011c3deeb5316cebe25fcc88e94f94a"
+    },
+    {
+      "subject": 10,
+      "file": "MNE-braininvaders2013-data/zenodo/2669187/subject_10/Session1/3.mat",
+      "bytes": 17721528,
+      "sha256": "424b6cfb4d61c2dfb1c9aaf0807dadcf43876c65ae3f5b317460eaffe5fc988b"
+    },
+    {
+      "subject": 11,
+      "file": "BI2013a-training-only/subject_11/meta.yml",
+      "bytes": 323,
+      "sha256": "e3fc1136602b023f2c55c08ce4d98383c49648c2d092e90ca85c4744063479f6"
+    },
+    {
+      "subject": 11,
+      "file": "BI2013a-training-only/subject_11/Session1/1.mat",
+      "bytes": 18713784,
+      "sha256": "8a87ee59c81763fbb78e39124815ab40fc5959ccc4d063a7a9172be52bed8534"
+    },
+    {
+      "subject": 11,
+      "file": "BI2013a-training-only/subject_11/Session1/3.mat",
+      "bytes": 18770360,
+      "sha256": "a8d3e481d3a154fb9e5721ef53f6125d8151365005dd69d645cfc06ea434652c"
+    },
+    {
+      "subject": 12,
+      "file": "BI2013a-training-only/subject_12/meta.yml",
+      "bytes": 323,
+      "sha256": "e3fc1136602b023f2c55c08ce4d98383c49648c2d092e90ca85c4744063479f6"
+    },
+    {
+      "subject": 12,
+      "file": "BI2013a-training-only/subject_12/Session1/1.mat",
+      "bytes": 18983608,
+      "sha256": "dd85d9b86549ec91aabe7fd4c5025dc3cbe2e13f7cf04665c0ba4ad091b74e87"
+    },
+    {
+      "subject": 12,
+      "file": "BI2013a-training-only/subject_12/Session1/3.mat",
+      "bytes": 18944440,
+      "sha256": "35735360dce979bc65e619d3f1c1a7ded4e9db5a8860782d74e5507b41b40b0f"
+    },
+    {
+      "subject": 13,
+      "file": "BI2013a-training-only/subject_13/meta.yml",
+      "bytes": 323,
+      "sha256": "e3fc1136602b023f2c55c08ce4d98383c49648c2d092e90ca85c4744063479f6"
+    },
+    {
+      "subject": 13,
+      "file": "BI2013a-training-only/subject_13/Session1/1.mat",
+      "bytes": 17408184,
+      "sha256": "0b0c2e3666f45b56de600c3b1b908e4f59ea3aec956d65f08ad24e96b1720ea8"
+    },
+    {
+      "subject": 13,
+      "file": "BI2013a-training-only/subject_13/Session1/3.mat",
+      "bytes": 17699768,
+      "sha256": "edde85f0b8e993c571c0f787f87f1f922963e3448fd8e2c53fc0f639af542b37"
+    },
+    {
+      "subject": 14,
+      "file": "BI2013a-training-only/subject_14/meta.yml",
+      "bytes": 323,
+      "sha256": "e3fc1136602b023f2c55c08ce4d98383c49648c2d092e90ca85c4744063479f6"
+    },
+    {
+      "subject": 14,
+      "file": "BI2013a-training-only/subject_14/Session1/1.mat",
+      "bytes": 19410104,
+      "sha256": "8095c45fe47c6724bb475c60478f535f0fdaee995d8416e8bcc0fdf23509b7f2"
+    },
+    {
+      "subject": 14,
+      "file": "BI2013a-training-only/subject_14/Session1/3.mat",
+      "bytes": 18957496,
+      "sha256": "cd8fcd7b796d4b0926edc258e3199452edf70600f8bf3a6037d39096ad961916"
+    },
+    {
+      "subject": 15,
+      "file": "BI2013a-training-only/subject_15/meta.yml",
+      "bytes": 323,
+      "sha256": "e3fc1136602b023f2c55c08ce4d98383c49648c2d092e90ca85c4744063479f6"
+    },
+    {
+      "subject": 15,
+      "file": "BI2013a-training-only/subject_15/Session1/1.mat",
+      "bytes": 18900920,
+      "sha256": "4610d0a110386edb664d0b2efd2916d8c8bbed2b53ad98cd2b5b84402d725fd9"
+    },
+    {
+      "subject": 15,
+      "file": "BI2013a-training-only/subject_15/Session1/3.mat",
+      "bytes": 18700728,
+      "sha256": "79beade5fdeeb058dec8e71eeb5b60a5bf29b070fd0dda38595b420218ef5bc5"
+    },
+    {
+      "subject": 16,
+      "file": "BI2013a-training-only/subject_16/meta.yml",
+      "bytes": 323,
+      "sha256": "e3fc1136602b023f2c55c08ce4d98383c49648c2d092e90ca85c4744063479f6"
+    },
+    {
+      "subject": 16,
+      "file": "BI2013a-training-only/subject_16/Session1/1.mat",
+      "bytes": 17873848,
+      "sha256": "69499396586a3b3c1dd1d96d354e11bedf2fda97793d6990fee09a1115edcd8b"
+    },
+    {
+      "subject": 16,
+      "file": "BI2013a-training-only/subject_16/Session1/3.mat",
+      "bytes": 18443960,
+      "sha256": "3b8d6e5429e8817bdf3a8dc6e51434771b7fcac87a7a5a529349489398ac6055"
+    },
+    {
+      "subject": 17,
+      "file": "BI2013a-training-only/subject_17/meta.yml",
+      "bytes": 323,
+      "sha256": "e3fc1136602b023f2c55c08ce4d98383c49648c2d092e90ca85c4744063479f6"
+    },
+    {
+      "subject": 17,
+      "file": "BI2013a-training-only/subject_17/Session1/1.mat",
+      "bytes": 18861752,
+      "sha256": "94b8c5127dd515a4069c77cf5fbbdae0b2eb60e163f88c7bc08b4db794a83359"
+    },
+    {
+      "subject": 17,
+      "file": "BI2013a-training-only/subject_17/Session1/3.mat",
+      "bytes": 18687672,
+      "sha256": "0b447061688dcc89c1a9d66cf7c6dc5d163802f3e5b7c00110602d53d84cfd4d"
+    },
+    {
+      "subject": 18,
+      "file": "BI2013a-training-only/subject_18/meta.yml",
+      "bytes": 323,
+      "sha256": "e3fc1136602b023f2c55c08ce4d98383c49648c2d092e90ca85c4744063479f6"
+    },
+    {
+      "subject": 18,
+      "file": "BI2013a-training-only/subject_18/Session1/1.mat",
+      "bytes": 17930424,
+      "sha256": "a7149c070ac160afc7e1a6cea28e2f80fa2128d5e55bc0dfe2e8413c2605d357"
+    },
+    {
+      "subject": 18,
+      "file": "BI2013a-training-only/subject_18/Session1/3.mat",
+      "bytes": 18139320,
+      "sha256": "b0c7eebf7ccaf7c9fadd8db75b64e3d84c4a50bd045656b1da540be226b05db5"
+    },
+    {
+      "subject": 19,
+      "file": "BI2013a-training-only/subject_19/meta.yml",
+      "bytes": 323,
+      "sha256": "e3fc1136602b023f2c55c08ce4d98383c49648c2d092e90ca85c4744063479f6"
+    },
+    {
+      "subject": 19,
+      "file": "BI2013a-training-only/subject_19/Session1/1.mat",
+      "bytes": 18665912,
+      "sha256": "cc0ee6a601c583d11c5f23d8a96be809c5bc008521e1da5e7af17c2404614630"
+    },
+    {
+      "subject": 19,
+      "file": "BI2013a-training-only/subject_19/Session1/3.mat",
+      "bytes": 19053240,
+      "sha256": "85f0001499acd899d4ce0e01c4fb3615e37d02ed07de01cf6000937bf7715871"
+    },
+    {
+      "subject": 20,
+      "file": "BI2013a-training-only/subject_20/meta.yml",
+      "bytes": 323,
+      "sha256": "e3fc1136602b023f2c55c08ce4d98383c49648c2d092e90ca85c4744063479f6"
+    },
+    {
+      "subject": 20,
+      "file": "BI2013a-training-only/subject_20/Session1/1.mat",
+      "bytes": 18996664,
+      "sha256": "e6f6e338bda274a783032501644dc5cc643094127c430d2807b0b41a4a950548"
+    },
+    {
+      "subject": 20,
+      "file": "BI2013a-training-only/subject_20/Session1/3.mat",
+      "bytes": 17817272,
+      "sha256": "7bf23ed627ec1434296b948dde0b00eae1396c82dd86fe31c60ad8bb993ac337"
+    },
+    {
+      "subject": 21,
+      "file": "BI2013a-training-only/subject_21/meta.yml",
+      "bytes": 323,
+      "sha256": "e3fc1136602b023f2c55c08ce4d98383c49648c2d092e90ca85c4744063479f6"
+    },
+    {
+      "subject": 21,
+      "file": "BI2013a-training-only/subject_21/Session1/1.mat",
+      "bytes": 19592888,
+      "sha256": "a196e95f5142f9432cfaada561ec8b6cb9cd37899f30526ff67320fa6bb8af24"
+    },
+    {
+      "subject": 21,
+      "file": "BI2013a-training-only/subject_21/Session1/3.mat",
+      "bytes": 18657208,
+      "sha256": "70eb1bbf86fd4b86ac4cbcbc16430f66e39769ac01c70e5da8cdb3f32558c0c6"
+    },
+    {
+      "subject": 22,
+      "file": "BI2013a-training-only/subject_22/meta.yml",
+      "bytes": 323,
+      "sha256": "e3fc1136602b023f2c55c08ce4d98383c49648c2d092e90ca85c4744063479f6"
+    },
+    {
+      "subject": 22,
+      "file": "BI2013a-training-only/subject_22/Session1/1.mat",
+      "bytes": 18961848,
+      "sha256": "33060db00e86c03331f9c342d41d45784a796c8380b1d266c7b132ce584f53e9"
+    },
+    {
+      "subject": 22,
+      "file": "BI2013a-training-only/subject_22/Session1/3.mat",
+      "bytes": 18918328,
+      "sha256": "a7cf9dfaa16b7cf0e98240249a616ea5ad938713cf417c36a47152dfd9e70f4c"
+    },
+    {
+      "subject": 23,
+      "file": "BI2013a-training-only/subject_23/meta.yml",
+      "bytes": 323,
+      "sha256": "e3fc1136602b023f2c55c08ce4d98383c49648c2d092e90ca85c4744063479f6"
+    },
+    {
+      "subject": 23,
+      "file": "BI2013a-training-only/subject_23/Session1/1.mat",
+      "bytes": 19427512,
+      "sha256": "e49089d87c21b5b30f0b463249aec1af1ff81428b4b20101ce641f31349557be"
+    },
+    {
+      "subject": 23,
+      "file": "BI2013a-training-only/subject_23/Session1/3.mat",
+      "bytes": 19867064,
+      "sha256": "6dcb76545d9401be801867cc38824dbe424b73453fa8fedfbd8d956403ad26d9"
+    },
+    {
+      "subject": 24,
+      "file": "BI2013a-training-only/subject_24/meta.yml",
+      "bytes": 323,
+      "sha256": "e3fc1136602b023f2c55c08ce4d98383c49648c2d092e90ca85c4744063479f6"
+    },
+    {
+      "subject": 24,
+      "file": "BI2013a-training-only/subject_24/Session1/1.mat",
+      "bytes": 18365624,
+      "sha256": "38a973ab8eebb5b9f0f35aae135d18640bca88ecebbe38ea712dad12e77da1a0"
+    },
+    {
+      "subject": 24,
+      "file": "BI2013a-training-only/subject_24/Session1/3.mat",
+      "bytes": 18330808,
+      "sha256": "63b818a888b1d254795996a52d5e4f26cd863d3136d6a107ed6791dab5d224da"
+    }
+  ]
+}
