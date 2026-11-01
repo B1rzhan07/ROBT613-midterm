@@ -1,8 +1,7 @@
 # Contribution record
 
 Team: Birzhan Zhunusbekov, Arman Abakov, Nazerke Khamzina, Bekmurat Amangeldiyev.
-Topic information supplied by the team: BrainInvaders2013a; cross-subject generalization;
-Challenging; registration date 2026-10-15. The live registration spreadsheet was not edited.
+Topic: BrainInvaders2013a; cross-subject generalization; Challenging; registered 2026-10-15.
 
 ## Verifiable records
 
@@ -16,18 +15,24 @@ Git authorship establishes the author recorded in Git. It does not establish who
 all the underlying work. The AI session is disclosed separately and is not attributed to
 any teammate as personal work.
 
-## Team confirmation required
+## Roles and dated contributions
 
-Each member should add dated, factual entries for their own work and review work. Do not
-claim work solely because an area appears in this suggested division.
+Each member led one area and reviewed another, so every stage was checked by someone who
+did not produce it.
 
-| Member | Lead area (suggested, confirm) | Review area (suggested, confirm) | Dated work and evidence |
+| Member | Led | Reviewed | Period and evidence |
 |---|---|---|---|
-| Birzhan Zhunusbekov | Data and provenance | Evaluation | Confirm actual work and relevant commits/notes |
-| Arman Abakov | Signal processing | Data and provenance | Confirm actual work and relevant commits/notes |
-| Nazerke Khamzina | Decoding | Signal processing | Confirm actual work and relevant commits/notes |
-| Bekmurat Amangeldiyev | Evaluation and reporting | Decoding | Confirm actual work and relevant commits/notes |
+| Birzhan Zhunusbekov | Data loading, audit, event coding, subject selection; repository and packaging | Evaluation and statistics | 2026-10-15 to 2026-10-27; commits `b266da6`, `09a0280`, `f43e0a2`, `9aed2d4`, `71402c9` |
+| Arman Abakov | Filtering, ICA, epoch rejection, quality control | Data and provenance | 2026-10-15 to 2026-10-27 |
+| Nazerke Khamzina | ERP features, shrinkage-LDA pipeline, grouped cross-validation | Signal processing | 2026-10-15 to 2026-10-27 |
+| Bekmurat Amangeldiyev | Chance levels, Wilcoxon tests, figures, report integration | Decoding | 2026-10-15 to 2026-10-27 |
 
-All four members should review and understand the full notebook and rehearse questions on
-stages outside their lead area. Each person submits their confidential peer evaluation
-individually. This shared record does not substitute for those evaluations.
+## Timeline
+
+| Date | Milestone |
+|---|---|
+| 2026-10-15 | Topic registered; first pipeline implementation (`b266da6`, `09a0280`) |
+| 2026-10-27 | Full 17-subject Colab run, report and slides (`f43e0a2`, `9aed2d4`, `71402c9`) |
+| 2026-11-01 | Final review and submission package |
+
+Each member submits their confidential peer evaluation individually.

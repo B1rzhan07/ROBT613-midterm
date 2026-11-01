@@ -252,7 +252,7 @@ function numbered(s, x, y, w, items, {fill = CORAL, color = INK, size = 15, gap 
 // 8 · Evaluation design
 {
   const s = slide('Same test epochs, different training data', 'Stage 6 · Honest evaluation',
-    '65 s. All three conditions test exactly the same held-out run of each subject. Within trains on the subject’s other run (leave-one-run-out, never a random epoch split, because overlapping flashes share samples). LOSO trains on all runs of the other 16 users, and an assertion guarantees the test subject is never in training. LOSO-matched subsamples the other users to the same target and non-target counts as Within and averages ten seeded draws. Chance level comes from 200 label permutations within runs. Each subject’s score is the mean over its two test runs. Source: notebook stages 5–6 and comparison_runs.csv.',
+    '65 s. All three conditions test exactly the same held-out run of each subject. Within trains on the subject’s other run (leave-one-run-out, never a random epoch split, because overlapping flashes share samples). LOSO trains on all runs of the other 16 users, and an assertion guarantees the test subject is never in training. LOSO-matched subsamples the other users to the same target and non-target counts as Within and averages ten seeded draws. Within chance comes from 200 label permutations within runs; LOSO chance from 1,000 shuffles of the test labels against the fixed LOSO scores. Each subject’s score is the mean over its two test runs. Source: notebook stages 5–6 and comparison_runs.csv.',
     {stage: 5});
   const C = [['Within', COND.within, 'the subject’s own other run', 'Leave-one-run-out, 2 folds'],
     ['LOSO-matched', COND.loso_matched, 'other 16 users, subsampled to the Within class counts', '10 seeded draws averaged'],
@@ -269,7 +269,7 @@ function numbered(s, x, y, w, items, {fill = CORAL, color = INK, size = 15, gap 
     txt(s, note, {x: x + 0.25, y: 4.55, w: 3.4, h: 0.4, fontSize: 13, italic: true, color: SLATE});
   });
   const K = [['Metric', 'ROC AUC (primary) and balanced accuracy; one score per subject'],
-    ['Chance level', '200 label permutations within runs; AUC 0.5 baseline'],
+    ['Chance level', 'Within: 200 within-run label permutations; LOSO: 1,000 test-label shuffles'],
     ['Variability', 'mean ± SD across subjects and across test folds']];
   K.forEach(([h, b], i) => {
     const x = 0.6 + i * 4.1;

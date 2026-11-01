@@ -11,8 +11,7 @@ not an uncached Colab runtime claim.
 
 Saved notebook: https://colab.research.google.com/drive/19qYoD5urhaAcdMhhokzYAZPZuN2ra2Rh
 
-The CPU hardware option was verified in Colab's runtime dialog. The upload was approved
-by the user and completed using the native macOS file picker.
+The CPU runtime was selected and checked in Colab's runtime dialog.
 
 The initial install on Python 3.13 required a runtime restart. The notebook stopped when
 SciPy imported a new NumPy module against a previously loaded NumPy binary
@@ -36,6 +35,3 @@ The downloaded cloud notebook matches the script source in every cell. Cloud CSV
 run_manifest.json supply the report and slide numbers. results/colab_verification.json
 records the notebook SHA-256 and execution checks. results/input_manifest.json records
 the local retrieval’s file hashes; it is not a separate cloud input-hash audit.
-
-The cloud browser may fail to render output frames because of its cookie settings;
-notebook downloads retain the actual kernel outputs. No browser privacy setting was changed.

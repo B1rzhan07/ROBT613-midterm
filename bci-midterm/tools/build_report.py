@@ -34,7 +34,7 @@ rows='\n'.join(f"{int(s)} & {r['within']:.3f} & {r['loso_matched']:.3f} & {r['lo
 testrows='\n'.join(f"H{i+1} & {r.median_diff:.3f} & {r.rank_biserial:.3f} & {pval(r.p)} & {pval(r.p_holm_primary)} \\\\" for i,(_,r) in enumerate(tests.iloc[:3].iterrows()))
 sensrows='\n'.join(f"H{i+1} & {int(r.n)} & {r.median_diff:.3f} & {pval(r.p_holm_primary)} \\\\" for i,(_,r) in enumerate(sens.iterrows()))
 versions='\n'.join(esc(k)+' & '+esc(v)+r' \\' for k,v in m['versions'].items())
-primary='; '.join(f'H{i+1}: Holm $p={pval(r.p_holm_primary)}$' for i,(_,r) in enumerate(tests.iloc[:3].iterrows()))
+primary='; '.join(f'H{i+1}: Holm $p$ = {pval(r.p_holm_primary)}' for i,(_,r) in enumerate(tests.iloc[:3].iterrows()))
 status=[('supported' if r.p_holm_primary<.05 else 'not established') for _,r in tests.iloc[:3].iterrows()]
 psd=fig(18,'psd',caption='Example subject: Welch spectral inspection before and after preprocessing. The spectrum and the filter response motivate drift removal and a 20 Hz low-pass. This is evidence from the notebook, not a simulated signal.')
 sensors=fig(12,'sensors',caption='Sensor layout from the MOABB/MNE montage. The decoder uses the fixed Cz/P3/Pz/P4/Oz subset. The remaining channels support inspection and artifact cleaning.')
@@ -332,7 +332,7 @@ __EXPLORE__
 \subsection{Limits}
 The cohort includes __N__ single-session users from one acquisition protocol. It does
 not establish transfer to different equipment, clinical populations, days or tasks.
-Both conditions are evaluated offline. Zero-phase filters and per-run ICA require
+All three conditions are evaluated offline. Zero-phase filters and per-run ICA require
 future unlabelled samples, and therefore cannot establish immediate plug-and-play
 interaction. We decode single flashes rather than complete game commands. No character
 accuracy, information-transfer rate or online device-control result follows from AUC.

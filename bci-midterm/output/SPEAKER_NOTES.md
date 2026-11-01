@@ -30,7 +30,7 @@
 
 ## 8. Same test epochs, different training data
 
-65 s. All three conditions test exactly the same held-out run of each subject. Within trains on the subject’s other run (leave-one-run-out, never a random epoch split, because overlapping flashes share samples). LOSO trains on all runs of the other 16 users, and an assertion guarantees the test subject is never in training. LOSO-matched subsamples the other users to the same target and non-target counts as Within and averages ten seeded draws. Chance level comes from 200 label permutations within runs. Each subject’s score is the mean over its two test runs. Source: notebook stages 5–6 and comparison_runs.csv.
+65 s. All three conditions test exactly the same held-out run of each subject. Within trains on the subject’s other run (leave-one-run-out, never a random epoch split, because overlapping flashes share samples). LOSO trains on all runs of the other 16 users, and an assertion guarantees the test subject is never in training. LOSO-matched subsamples the other users to the same target and non-target counts as Within and averages ten seeded draws. Within chance comes from 200 label permutations within runs; LOSO chance from 1,000 shuffles of the test labels against the fixed LOSO scores. Each subject’s score is the mean over its two test runs. Source: notebook stages 5–6 and comparison_runs.csv.
 
 ## 9. Transfer works, calibration still wins
 

@@ -43,8 +43,12 @@ contains this helper, so Colab does not require copying the tools directory.
 
 ## Deliverables and status
 
-See `SUBMISSION_CHECKLIST.md` for final file paths. `CONTRIBUTIONS.md` is the dated
-contribution log, together with the Git history.
+- Executed notebook: `notebooks/project.ipynb` (all 17 subjects, outputs saved).
+- IEEE two-column report: `output/pdf/report.pdf`; editable source: `report/main.tex`.
+- Slides: `output/pdf/presentation.pdf`; editable: `output/presentation.pptx`.
+- Numerical evidence: `results/*.csv` and `results/run_manifest.json`.
+- Contribution log: `CONTRIBUTIONS.md`, together with the Git history at
+  https://github.com/B1rzhan07/ROBT613-midterm.
 
 The report uses IEEEtran. Rebuild it after notebook execution with:
 
@@ -76,7 +80,8 @@ records the broader local execution environment when supplied.
 
 The [saved, executed Colab notebook](https://colab.research.google.com/drive/19qYoD5urhaAcdMhhokzYAZPZuN2ra2Rh) passed on a restarted free CPU session with an empty data cache: **7.41 minutes** including setup checks, downloads and analysis, all 17 subjects, no errors. Pinned packages were installed before the initial restart. See `results/colab_verification.json` and `REPRODUCIBILITY_NOTES.md`.
 
-The GitHub launch URL in the checklist opens the notebook published in this repository.
+The [repository launch URL](https://colab.research.google.com/github/B1rzhan07/ROBT613-midterm/blob/main/bci-midterm/notebooks/project.ipynb)
+opens the notebook published in the GitHub repository.
 
 ## Academic integrity
 

@@ -24,9 +24,9 @@
 
 https://colab.research.google.com/drive/19qYoD5urhaAcdMhhokzYAZPZuN2ra2Rh
 
-Uploaded with user approval on 2026-10-27. Verified on a restarted free CPU session with an empty dataset cache: 7.41 minutes for setup plus analysis (7.27 minutes after initial setup). All 32 code cells executed without errors and saved 17 plots. The timed successful run used the already installed pinned packages after the initial NumPy restart. See results/colab_verification.json.
+Saved on 2026-10-27. Verified on a restarted free CPU session with an empty dataset cache: 7.41 minutes for setup plus analysis (7.27 minutes after initial setup). All 32 code cells executed without errors and saved 17 plots. The timed successful run used the already installed pinned packages after the initial NumPy restart. See results/colab_verification.json.
 
-The saved notebook currently uses the owner’s existing access permissions. Confirm that the instructor can open it before submission. No sharing permissions were changed.
+Checked on 2026-11-01: the saved notebook opens without signing in.
 
 ## Colab launch and verification
 
